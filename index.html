@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .btn{
+        border: none;
+        background-color: greenyellow;
+        height: 50px;
+        width: 100px;
+        border-radius: 50px;
+        margin-top: 20px;
+        font-size: 15px;
+       }
+       .btn2{
+        border: none;
+        background-color: red;
+        height: 50px;
+        width: 100px;
+        border-radius: 50px;
+        margin-top: 20px;
+        font-size: 15px;
+       }
+    </style>
+</head>
+
+<body>
+
+    
+  <h2 id="names"></h2>
+    <button class="btn" onclick="Add()">Add Name</button>
+    <button class="btn2" onclick="Delete()">Delete Name</button>
+    
+
+    <script>
+		let arr=["Ahsan","Babar","Bilal","Waris","Sameer"];
+		let a = document.getElementById("names").innerHTML = arr;
+		function Add(){
+			let ab = a.splice(parseInt(prompt("Enter index number you want to add",)),0,prompt("Enter any name"));
+      let b = document.getElementById("names").innerHTML =arr;
+		}
+    function Delete(){
+			let ab = a.splice(parseInt(prompt("Enter index number you want to dlete",)),1);
+      let b = document.getElementById("names").innerHTML =arr;
+		}
+    
+    </script>
+
+
+</body>
+
+</html>
